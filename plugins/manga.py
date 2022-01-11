@@ -41,7 +41,7 @@ async def _pdf(bot, callback_query):
                 archive.extractall(path=f'./Manga/{file_dir}/{f.stem}')
                 os.remove(f'./Manga/{file_dir}/{f.stem}/info.txt')
                 os.remove(f'./Manga/{file_dir}/{f.stem}.zip')
-                cmd = f'dir2pdf --subdirs vol_(.*) Manga/{file_dir}/' + 'Chapter.{}-@Manga_loverz.pdf' + f' Manga/{file_dir}/'
+                cmd = f'dir2pdf --subdirs vol_(.*) Manga/{file_dir}/' + 'Chapter.{}- @Manga_loverz.pdf' + f' Manga/{file_dir}/'
                 await run_cmd(cmd)
                 shutil.rmtree(f'./Manga/{file_dir}/{f.stem}')
         shutil.make_archive(file_dir, 'zip', file)
