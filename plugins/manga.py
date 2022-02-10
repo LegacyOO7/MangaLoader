@@ -34,7 +34,7 @@ async def _pdf(bot, callback_query):
             shutil.rmtree(d)
             return
     for file in glob.glob(f'{manga_dir}*/'):
-        file_dir = file[8:.]
+        file_dir = file[8:-1]
         p = Path('.')
         for f in p.glob(f'Manga/{file_dir}/*.zip'):
             with zipfile.ZipFile(f, 'r') as archive:
