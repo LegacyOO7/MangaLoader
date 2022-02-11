@@ -6,7 +6,7 @@ import math, os, time, tldextract, asyncio, shlex
 from typing import Tuple
 
 supported = '''http://18comic.org
-http://1stkissmanga.io
+http://1stkissmanga.com
 http://1stkissmanhua.com
 http://365manga.com
 http://3asq.org
